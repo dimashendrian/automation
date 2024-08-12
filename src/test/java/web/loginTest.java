@@ -37,16 +37,7 @@ public class loginTest {
         for (int i = 0; i < userlogin.size(); i++){
             homePage.login(userlogin.get(i), passwordUser.get(0));
         }
-
-//        Map<String, String> hashMapUserLogin = new HashMap<>();
-//        hashMapUserLogin.put("standard_user","secret_sauce");
-//        hashMapUserLogin.put("locked_out_user","secret_sauce");
-//        hashMapUserLogin.put("problem_user","secret_sauce");
-
-//        for (int i = 0; i < hashMapUserLogin.size(); i++){
-//            homePage.login(hashMapUserLogin.get(i), hashMapUserLogin.get(i));
-//        }
-        // logout
-//        homePage.login();
+        homePage.validateLogin(loginTestPositif());
+        return false;
     }
 }
