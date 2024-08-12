@@ -25,19 +25,19 @@ public class loginTest {
     }
 
     @Test
-    public void loginTestPositif() {
+    public void loginTest() {
         // data
         ArrayList<String> userlogin = new ArrayList();
         ArrayList<String> passwordUser = new ArrayList();
         userlogin.add("standard_user");
         userlogin.add("locked_out_user");
-        userlogin.add("problem_user");
+        userlogin.add("abcde");
         passwordUser.add("secret_sauce");
 
         for (int i = 0; i < userlogin.size(); i++){
             homePage.login(userlogin.get(i), passwordUser.get(0));
         }
-        homePage.validateLogin(loginTestPositif());
+        homePage.validateLogin(loginTest());
         return false;
     }
 }
