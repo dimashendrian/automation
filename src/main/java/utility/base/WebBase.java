@@ -8,7 +8,7 @@ public class WebBase {
     WebDriver driver;
 
     public WebDriver init() {
-        System.setProperty("webdriver.chrome.driver","/Users/samid/Downloads/chromedriver-win64/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/samid/Downloads/chromedriver-mac-x64 2/chromedriver");
         driver = new ChromeDriver();
         driver.navigate().to("https://www.saucedemo.com/");
         return driver;
