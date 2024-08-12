@@ -21,7 +21,11 @@ public class HomePage {
     @FindBy(xpath = "//input[@id='login-button']")
     public WebElement btnLogin;
 
-//    @FindBy()
+    @FindBy(xpath = "//*[@id=\"header_container\"]/div[1]/div[2]/div")
+    public WebElement headerPage;
+
+    @FindBy(xpath = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
+    public WebElement errorMessage;
 
     public HomePage (WebDriver driver) {
         PageFactory.initElements(driver,this);
@@ -43,7 +47,19 @@ public class HomePage {
         btnLogin.click();
     }
 
-    public void validateLogin() {
+    public void validateLoginSucessfully() {
+        Assert.assertTrue(headerPage.isDisplayed());
+    }
 
+    public void validateLoginUnsucessfully() {
+        Assert.assertTrue(errorMessage.isDisplayed());
+    }
+
+    public void validateLogin(boolean loginValue){
+        if(loginValue){
+            validateLoginSucessfully();
+        } else {
+            validateLoginUnsucessfully();
+        }
     }
 }
