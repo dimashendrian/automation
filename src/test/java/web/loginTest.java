@@ -25,7 +25,7 @@ public class loginTest {
     }
 
     @Test
-    public void loginTest() {
+    public boolean loginTest() {
         // data
         ArrayList<String> userlogin = new ArrayList();
         ArrayList<String> passwordUser = new ArrayList();
